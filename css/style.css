@@ -1,13 +1,34 @@
+/*color palette
+#F3F9D2 lightest green
+#CBEAA6 light green
+#C0D684 green
+#3D0B37 dark purple
+#63264A lighter purple
+*/
+
+/*//change home page images on hover*/
+
+/*<img src="LibraryTransparent.png" id="letstalk">*/
+#letstalk {
+
+}
+
+#letstalk:hover {
+    background-image: url('assets/letstalkhover.png');
+
+}
+
+
 /***** NAVBAR *****/
 .navbar-default {
-  background-color: pink;
+  background-color: #63264A;
   border-radius: 0;
   background-image: none;
 }
 
 /* Navbar title */
 .navbar-default .navbar-brand {
-  color: white;
+  color: #F3F9D2;
   font-size: 20px;
   font-weight: bold;
 }
@@ -17,7 +38,7 @@
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: pink;
+    color: #F3F9D2;
 }
 
 /* Navbar links */
@@ -34,19 +55,18 @@
 .navbar-header .navbar-toggle:hover,
 .navbar-header .navbar-toggle:focus {
   background-color: #ebd122;
-  color: #242424;
+  color: #CBEAA6;
 }
 
 /*** Portfolio pieces ***/
 .portfolio-thumbnail {
   background-color: #fff;
-  border-color: #863ee3;
-  border-width: 2px;
   width: 95%;
 }
 
 .portfolio-thumbnail:hover {
-  border-color: #ebd122;
+  box-shadow: 10px 10px 5px #ccc;
+
 }
 
 .portfolio-title {
@@ -59,8 +79,8 @@
 .portfolio-image {
 }
 
-#about-world {
-  max-height: 200px;
+#aboutme {
+  max-height: 600px;
 }
 
 .resume h3 {
@@ -99,6 +119,6 @@ a:hover {
 body {
   padding-top: 50px;
   font-family: 'Georgia', serif;
-  background-color: #f7f1fa;
+  background-color: #F3F9D2;
   color: #242424;
 }
