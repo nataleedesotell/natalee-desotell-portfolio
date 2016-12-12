@@ -44,6 +44,8 @@ html, body {
   background-color: #63264A;
   border-radius: 0;
   background-image: none;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 /* Navbar title */
@@ -51,6 +53,8 @@ html, body {
   color: #F3F9D2;
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 /* Navbar hover effects */
@@ -105,23 +109,26 @@ html, body {
 
 .resume h3 {
   font-weight: bold;
+  color: #3D0B37;
 }
 
 hr {
   border-color: white;
-  border-width: 2px;
+  border-width: 4px;
 }
 
 p {
   font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #3D0B37;
 }
 
 a {
-  color: #863ee3;
+  color: gray;
 }
 
 a:hover {
-  color: #ebd122;
+  color: pink;
 }
 
 .jumbotron {
@@ -134,6 +141,7 @@ a:hover {
 .jumbotron h2 {
   font-size: 36px;
   font-weight: bold;
+  color: white;
 }
 
 body {
