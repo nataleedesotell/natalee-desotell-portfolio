@@ -6,6 +6,26 @@
 #63264A lighter purple
 */
 
+
+i
+{
+    padding: 20px 20px;
+    display: inline-block;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 600px;
+    -moz-box-shadow: 0px 0px 2px #888;
+    -webkit-box-shadow: 0px 0px 2px #888;
+    box-shadow: 0px 0px 2px #888;
+    margin: 1%;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+
 /*//change home page images on hover*/
 
 /*<img src="LibraryTransparent.png" id="letstalk">*/
