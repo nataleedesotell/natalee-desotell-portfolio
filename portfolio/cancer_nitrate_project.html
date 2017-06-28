@@ -57,26 +57,30 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
 					<h2 class="portfolio-title">Nitrate x Cancer Capstone Project</h2>
-					<p class="portfolio-description">
-						For my summer 2017 capstone, I was tasked with a public health challenge. My favorite kind!
-							</br></br>
-						Here's the challenge: it has been suggested that there is a positive relationship between nitrates in water and cancer rates. To investigate, we have two data sources:
-						</br></br>
-						1) Point data where wells were sampled for nitrates, randomly distributed (i.e., the well locations have nothing to do with the levels)
-						2) Census tract data with cancer rates collected over a ten-year period
-							</br></br>
-							<h3>Nitrate Data</h3>
-						One of the first steps was to interpolate the point data into a raster surface; in laymen's terms, I needed to guess the values between the points. One method is called Inverse Distance Weighting (IDW). I won't get into the nitty gritty of that here, but rest assured it gets the job done.
+					<p>
+						For my summer 2017 capstone, I was tasked with a public health challenge. My favorite kind!</p>
 							</br>
-						With IDW, there's one value that is up to the researcher: the power value, or k. This is an exponent value that should be somewhere between 0.5 and 3, but there is no rule of thumb for exactly what it should be. Each value of k returns a slightly different raster image. Play around with some k-values to see how it changes:
-					</p>
+							<h2>The Challenge</h2>
+						<p>Here's the challenge: it has been suggested that there is a positive relationship between nitrates in water and cancer rates. To investigate, I was given two data sources.</p>
+						<h2>Data Sources</h2>
+						<p>
+						1) Point data where wells were sampled for nitrates (randomly distributed)
+						</br>
+						<img id="mapimage" class="profile" src="../assets/wellpoints.PNG">
+						</br>
+						2) Census tract data with cancer rates collected over a ten-year period</p>
+						<img id="mapimage" class="profile" src="../assets/cancertracts.PNG">
+							<h2>Turning Nitrate Data into Something Useful</h2>
+						<p> One of the first steps was to interpolate the point data into a raster surface; in laymen's terms, interpolation guesses the values between the points of known values (i.e., the wells). One method is called Inverse Distance Weighting (IDW). I won't get into the nitty gritty of IDW, but rest assured it gets the job done.
+							</br></br>
+						With IDW, there's one value that's up to the researcher: the power value (k). This is an exponent  that should be somewhere between 0.5 and 3, but there is no rule of thumb for exactly what it should be. Each value of k returns a slightly different raster image. Play around with some k-values to see how it changes: </p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="dropdown nitratedropdown col-md-12 portfolio-image">
 					
 			<select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-			    <option value=" " selected>Select a k-value</option>
+			    <option value="../assets/choosek.png" selected>Select a k-value</option>
 			    <option value= "../assets/idw_5.png" >.5</option>
 			    <option value= "../assets/idw_75.png" >.75</option>
 			    <option value= "../assets/idw1.png" >1</option>
@@ -90,17 +94,45 @@
 			    <option value= "../assets/idw3.png" >3</option>
 			</select>
   
-<br><br>
+</br>
 
-<img id="imageToSwap" class="profile" src=""../assets/choosek.png"">
+<img id="imageToSwap" class="profile" src="../assets/choosek.png">
 
 				</div>
 			</div>
 
 						<div class="row">
 				<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-					<p class="portfolio-description">
-						I played around with the different k-values and landed on 1.25 as the optimal choice. I liked 1.25 because it didn't have as many of those "islands" you see when k = 3, but it captures more nuance than when k = 0.5. I saw it as a nice happy medium.
+					<p>
+						I decided on k=1.25 as the optimal choice for my analysis because it doesn't have as many of those "islands" you see when k=3, but it captures more nuance than when k=0.5. It's a happy medium.</p>
+							
+						<h2>Checking if Cancer is Clustered</h2><p>
+						It is wise to check if the cancer data are clustered before attempting an analysis. The project requested that I use Kernel Density Estimation (KDE) for this, which would not have been my first choice. However, I tried KDE using centroids for each tract because I'm a good sport. The output looks like this:
+							</br></br>
+							<img id="mapimage" class="profile" src="../assets/cancerkde.PNG">
+							</br></br>
+						It appears to cluster around population centers like Milwaukee, Madison, Appleton, and Green Bay. Keep in mind, these are cancer<i>rates</i>so it is already normalized.</p>
+
+						<h2>The Fun Part: Regression Analysis</h2>
+						<p>Using a spatial join, I aggregated the nitrate data to census tracts because they need to be in the same spatial units for regression.
+							</br></br>
+						I decided to use Ordinary Least Squares regression, where the dependent variable is the cancer rate and the explanatory variable is the nitrate rate. 
+							</br></br>
+						The output map below shows how well the model performed. The red areas show where the cancer rate is higher than the model predicted and the blue areas show where cancer rate is lower than the model predicted. The key to look for here is a lack of clustering; we don’t want to see a lot of clustered red areas or blue areas because this would suggest we’re missing an explanatory variable. 
+						</br></br>
+						<img id="mapimage" class="profile" src="../assets/ols_regression.png">
+						</br></br>
+						As evidenced by the OLS standard deviation map, there are quite a few red clusters. This means that while nitrate might have some explanatory power, it is not a main component.
+						</br></br>
+						This is to be expected, because just based on common knowledge, there are other causes of cancer, including: air quality, family history, and diet. These were not included in the model.
+						</br></br>
+						The numeric output from OLS tells more of the story. The adjusted R-squared value is 0.051971, which indicates that this model explains about 5% of the story of cancer incidence in Wisconsin.
+						</br></br>
+						<h2>The Verdict</h2>
+						<p>Returning to the hypothesis, do nitrate rates in Wisconsin have a relationship to cancer rates? With only 5% explanation, it looks like there are many other factors needed to model cancer rates in Wisconsin. Thus, we cannot reject the null hypothesis. 
+						</br></br>
+						Moving forward, I would include additional variables and explore their relationships to cancer rates using a scatterplot matrix. Ideally, then we would get to a model with at least 80 percent R-squared.
+						</p>
 
 
 					</p>

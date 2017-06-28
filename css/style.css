@@ -32,10 +32,13 @@ html, body {
 }
 
 .nitratedropdown {
-margin-left: 10%;
+margin-left: 20%;
 padding: 20px;
 }
 
+#mapimage {
+  height: 300px;
+}
 
 /***** NAVBAR *****/
 .navbar-default {
