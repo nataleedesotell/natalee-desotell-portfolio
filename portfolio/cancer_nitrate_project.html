@@ -58,15 +58,17 @@
 				<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
 					<h2 class="portfolio-title">Nitrate x Cancer Capstone Project</h2>
 					<p class="portfolio-description">
-						For my summer 2017 capstone for the GIS & Web Map Programming Online Master's Program, I was tasked with a public health challenge. My favorite!
+						For my summer 2017 capstone, I was tasked with a public health challenge. My favorite kind!
 							</br></br>
-						Here's the problem: there's evidence that nitrates in water may increase risk of cancer. We have point data where wells were sampled for nitrate levels and we also have census tract data with cancer rates collected over a ten-year period.
+						Here's the challenge: it has been suggested that there is a positive relationship between nitrates in water and cancer rates. To investigate, we have two data sources:
+						</br></br>
+						1) Point data where wells were sampled for nitrates, randomly distributed (i.e., the well locations have nothing to do with the levels)
+						2) Census tract data with cancer rates collected over a ten-year period
 							</br></br>
-						Here's the challenge: how do I compare randomly distributed point data with polygons?
-							</br></br>
-						One of the first steps was to interpolate the point data into a raster surface; in laymen's terms, I needed to guess the values between the points. One method to do this is called Inverse Distance Weighting (IDW). I won't get into the nitty gritty of that here, but rest assured it gets the job done!
-							</br></br>
-						With IDW, there's one value that is up to the researcher. It's been called q, p, k, and the power value; these all mean the same thing. I call it k. Essentially, it's an exponent value that should be somewhere between 0.5 and 3. Each value of k returns a slightly different raster image. Play around with some k-values to see how it changes:
+							<h3>Nitrate Data</h3>
+						One of the first steps was to interpolate the point data into a raster surface; in laymen's terms, I needed to guess the values between the points. One method is called Inverse Distance Weighting (IDW). I won't get into the nitty gritty of that here, but rest assured it gets the job done.
+							</br>
+						With IDW, there's one value that is up to the researcher: the power value, or k. This is an exponent value that should be somewhere between 0.5 and 3, but there is no rule of thumb for exactly what it should be. Each value of k returns a slightly different raster image. Play around with some k-values to see how it changes:
 					</p>
 				</div>
 			</div>
@@ -90,14 +92,13 @@
   
 <br><br>
 
-<img id="imageToSwap" class="profile" src="">
+<img id="imageToSwap" class="profile" src=""../assets/choosek.png"">
 
 				</div>
 			</div>
 
 						<div class="row">
 				<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-					<h2 class="portfolio-title">Nitrate x Cancer Capstone Project</h2>
 					<p class="portfolio-description">
 						I played around with the different k-values and landed on 1.25 as the optimal choice. I liked 1.25 because it didn't have as many of those "islands" you see when k = 3, but it captures more nuance than when k = 0.5. I saw it as a nice happy medium.
 
