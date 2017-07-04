@@ -1,0 +1,13 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+    <option value="http://cdns2.freepik.com/free-photo/facebook-logo_318-49940.jpg" selected>Facebook</option>
+    <option value="http://cdns2.freepik.com/free-photo/twitter-logo_318-40459.jpg">Twitter</option>
+    <option value="http://cdns2.freepik.com/free-photo/instagram-social-network-logo-of-photo-camera_318-64651.jpg">Instagram</option>
+</select>
+  
+<br><br>
+
+<img id="imageToSwap" class="profile" src="http://cdns2.freepik.com/free-photo/facebook-logo_318-49940.jpg">
