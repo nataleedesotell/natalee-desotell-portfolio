@@ -58,6 +58,10 @@ padding: 20px;
 
 }
 
+.navbar-brand img {
+  height: 3rem;
+}
+
 /* Navbar hover effects */
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
