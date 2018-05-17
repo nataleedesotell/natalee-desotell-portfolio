@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style>
+#map {
+    position: fixed;
+    width:50%;
+}
+#features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: Tw Cen MT;
+    overflow-y: scroll;
+    background-color: #fafafa;
+}
+section {
+    padding:  25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 16px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 1500px;
+}
+</style>
+
+<div id='map'></div>
+<div id='features'>
+    <section id='welcome' class='active'>
+        <h3>Hi, I'm Natalee!</h3>
+        <p>I like to a) think spatially, b) create pretty things, and c) play with HTML, CSS, and JavaScript. It made sense to create little 'resumap' to accompany my static resume. This fills in some gaps in my resume, like where I come from and what I'm about. It includes some details about my favorite travels and important "aha" moments in my life.</p>
+    </section>
+
+
+    <section id='poynette' class='active'>
+        <h3>Yes, I know the muffin man.</h3>
+        <p>I grew up in a tiny town in Wisconsin where my parents own a wholesale bakery. I started there by cracking eggs at age five. From middle school until I left Wisconsin in 2017, I helped them sell their products at the local farmer's market. Even though I live X miles away, now, I still found a way to contribute; I built them a new website in April 2017. It utilizes HTML5, CSS, and Bootstrap and is hosted using GitHub pages. You can check out the code here. </p>
+    </section>
+
+
+
+    <section id='mke' class='active'>
+        <h3>First Year of College</h3>
+        <p>My first year of college was in Milwaukee back in 2008. This is where I volunteered with an organization to end human trafficking, which opened my eyes to all the factors that can contribute to and dismantle human suffering. I started to turn my focus towards population health, economics, and social justice issues. </p>
+    </section>
+
+
+    <section id='uwmad' class='active'>
+        <h3>Badger for life.</h3>
+        <p>After a year in Milwaukee, I transferred to UW-Madison. I got more involved with social justice groups, like WISPIRG, and even got a chance to develop and lead my own organization "Just Food" under the WISPIRG umbrella. I got my first taste of leadership as a oversaw twenty interns in coalition building and lobbying campus to increase their fair trade and local food products in the food halls. 
+        </br></br>
+        I bounced around between majors for awhile, and I landed on three majprs: International Studies, Political Science, and Languages & Cultures of Asia. I loved the International Studies major because of its focus on international political economy; I still like to get nerdy over supply and demand graphs! Political Science fascinated me. 
+
+         </p>
+    </section>
+
+
+
+    <section id='pune'>
+        <h3>Study Abroad in Pune</h3>
+        <p>I spent my last semester as a student at UW-Madison in India, where I interned at a microinsurance organization called Parvati ....   </p>
+    </section>
+
+    
+    <section id='uwcu'>
+        <h3>UW Credit Union</h3>
+        <p>After college, I worked as a bank teller for just under two years. I learned a ton about personal finance while I was there. I also made some of the best friends I've ever had. </p>
+    </section>
+
+
+    <section id='giswmp'>
+        <h3>GIS, Cartography, and Programming</h3>
+        <p>As much as I loved UW Credit Union, I knew it was not a career for me. I was sure I wanted to get into public health, still, but I needed a unique skillset to set myself apart from the crowd. I had been eyeing UW-Madison's GIS Certificate program for many years, and I decided to go for it in 2015. It was one of the best decisions I've ever made. 
+      </br></br>
+
+      
+        </p>
+    </section>
+
+
+    <section id='yale'>
+        <h3>Yale MPH</h3>
+        <p> Yale MPH
+        </p>
+    </section>
+
+</div>
+
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibmF0YWxlZWRlc290ZWxsIiwiYSI6ImNqaDRvaGk3cDB1OXgyd253bHAyMjMzNG0ifQ.R6PpkeCYtazBu_nX4PVbaQ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/nataleedesotell/cjh4ole6f38vv2rpmxswcd68c',
+        bearing: -0,
+        center: [-108.866174, 49.272291],
+        zoom: 2,
+        speed: 0.8,
+        pitch: 0
+});
+var chapters = {
+    'welcome': {
+        bearing: -0,
+        center: [-108.866174, 49.272291],
+        zoom: 2,
+        speed: 0.8,
+        pitch: 0
+    },
+
+    'poynette': {
+    bearing: -0,
+    center: [-89.4029, 43.3903],
+    zoom: 2,
+    speed: 0.8,
+    pitch: 0
+},
+
+    'mke': {
+    bearing: -0,
+    center: [-108.866174, 49.272291],
+    zoom: 2,
+    speed: 0.8,
+    pitch: 0
+},
+    'uwmad': {
+        bearing: -15,
+        center: [-89.405240, 43.075453],
+        zoom: 16.7,
+        pitch: 45
+    },
+
+
+
+    'pune': {
+        center: [73.8567, 18.5204],
+        bearing: -150,
+        zoom: 12,
+        speed: 0.6,
+        pitch: 45
+    },
+
+    'uwcu': {
+        center: [-122.580020, 45.533977],
+        bearing: -150,
+        zoom: 16.72,
+        speed: 0.6,
+        pitch: 45
+    },
+    'giswmp': {
+        bearing: -45,
+        center: [-149.903216, 61.198840],
+        zoom: 15.99,
+        speed: 0.6,
+        pitch: 45
+    },
+    'yale': {
+        bearing: 60,
+        center: [-134.408720, 58.300388],
+        zoom: 16.57,
+        speed: 0.6,
+        pitch: 45
+    },
+
+
+        'mapbox': {
+        bearing: -29.60,
+        center: [-122.661895, 45.523444],
+        zoom: 16.16,
+        pitch: 18.50,
+        speed: 0.6
+    },
+    'seeya': {
+        bearing: -0,
+        center: [-108.866174, 49.272291],
+        zoom: 2,
+        speed: 0.8,
+        pitch: 0
+    },
+    'interests': {
+        bearing: -0,
+        center: [-108.866174, 49.272291],
+        zoom: 2,
+        speed: 0.8,
+        pitch: 0
+    }
+};
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'baker';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+
+</body>
+</html>
