@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,12 +7,66 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="keywords" content="maps, cartography"/>
+        <link rel="icon" href="./assets/favi.png">
+        <title>Natalee Desotell</title>
+
+        <!--put your Bootstrap stylesheet links below this comment and above style.css-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://use.fontawesome.com/41889622a9.js"></script>
+
+
+
+
+
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
 </head>
 <body>
+
+            <nav class="navbar navbar-default navbar-fixed-top"> <!-- Create the navbar -->
+      <div class="container">
+        <div class="navbar-header"> <!-- Create the navbar -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+                        <span class="glyphicon glyphicon-menu-hamburger"></span><span class="mobile-menu"> Menu</span>
+              </button> <!-- Hamburger button for smaller devices -->
+                <a class = "navbar-brand" href="index.html" class="navbar-left navbar-brand"><img src="./assets/natalee.png"></a>   <!-- Brand -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="resumap.html">Resumap</a></li>
+                        <li><a href="writing.html">Writing</a></li>
+
+
+
+              </ul>
+            </div> <!--/.navbar-collapse -->
+          </div> <!--/.container -->
+        </nav> <!--/navigation bar -->
 
 <style>
 #map {
@@ -30,85 +85,73 @@ section {
     line-height: 25px;
     border-bottom: 1px solid #ddd;
     opacity: 0.25;
-    font-size: 16px;
+    font-size: 20px;
 }
 section.active {
     opacity: 1;
 }
 section:last-child {
     border-bottom: none;
-    margin-bottom: 1500px;
+    margin-bottom: 1000px;
 }
 </style>
 
 <div id='map'></div>
 <div id='features'>
     <section id='welcome' class='active'>
-        <h3>Hi, I'm Natalee!</h3>
-        <p>I like to a) think spatially, b) create pretty things, and c) play with HTML, CSS, and JavaScript. It made sense to create little 'resumap' to accompany my static resume. This fills in some gaps in my resume, like where I come from and what I'm about. It includes some details about my favorite travels and important "aha" moments in my life.</p>
+    </br>  
+        <h3>Hey, there! I'm Natalee</h3>
+         <br>
+        <p> I like to <br> a) think spatially, <br> b) create pretty things, and <br> c) play with HTML, CSS, and JavaScript. <br><br> It made sense to create little 'resumap' to accompany my static resume. This fills in some gaps in my resume, like where I come from and what I'm about. It includes some details about my favorite travels and important "aha" moments in my life.</p>
     </section>
-
-
     <section id='poynette' class='active'>
-        <h3>Yes, I know the muffin man.</h3>
-        <p>I grew up in a tiny town in Wisconsin where my parents own a wholesale bakery. I started there by cracking eggs at age five. From middle school until I left Wisconsin in 2017, I helped them sell their products at the local farmer's market. Even though I live X miles away, now, I still found a way to contribute; I built them a new website in April 2017. It utilizes HTML5, CSS, and Bootstrap and is hosted using GitHub pages. You can check out the code here. </p>
+        <h3>Yeah, I know the muffin man.</h3>
+        <p>I grew up in a tiny town in Wisconsin where my parents own a wholesale bakery. I started there by cracking eggs at age five. From middle school until I left Wisconsin in 2017, I helped them sell their products at the local farmer's market. Even though I live 1,033 miles away, now, I still found a way to contribute; I built them a <a href = "http://chrisandlorisbakehouse.com/"> new website</a> in April 2018. It utilizes HTML5, CSS, and Bootstrap and is hosted using GitHub pages. You can check out the code <a href="https://github.com/chrisandlorisbakehouse/chrisandlorisbakehouse.github.io/tree/master">here</a>.
     </section>
-
-
-
-    <section id='mke' class='active'>
-        <h3>First Year of College</h3>
+    <section id='mke'>
+        <h3>Off to College</h3>
         <p>My first year of college was in Milwaukee back in 2008. This is where I volunteered with an organization to end human trafficking, which opened my eyes to all the factors that can contribute to and dismantle human suffering. I started to turn my focus towards population health, economics, and social justice issues. </p>
     </section>
-
-
-    <section id='uwmad' class='active'>
+    <section id='uwmad'>
         <h3>Badger for life.</h3>
-        <p>After a year in Milwaukee, I transferred to UW-Madison. I got more involved with social justice groups, like WISPIRG, and even got a chance to develop and lead my own organization "Just Food" under the WISPIRG umbrella. I got my first taste of leadership as a oversaw twenty interns in coalition building and lobbying campus to increase their fair trade and local food products in the food halls. 
+        <p>
+            
+        After a year in Milwaukee, I transferred to UW-Madison. I got more involved with social justice groups, like WISPIRG, and even got a chance to develop and lead my own organization "Just Food" under the WISPIRG umbrella. I got my first taste of leadership as a oversaw twenty interns in coalition building and lobbying campus to increase their fair trade and local food products in the food halls. 
         </br></br>
-        I bounced around between majors for awhile, and I landed on three majprs: International Studies, Political Science, and Languages & Cultures of Asia. I loved the International Studies major because of its focus on international political economy; I still like to get nerdy over supply and demand graphs! Political Science fascinated me. 
+        I bounced around between majors for awhile, and I landed on three: International Studies, Political Science, and Languages & Cultures of Asia. I loved the International Studies major because of its focus on international political economy; I still like to get nerdy over supply and demand graphs! Political Science fascinated me. 
 
-         </p>
+
+        </p>
     </section>
-
-
-
     <section id='pune'>
-        <h3>Study Abroad in Pune</h3>
-        <p>I spent my last semester as a student at UW-Madison in India, where I interned at a microinsurance organization called Parvati ....   </p>
+        <h3>Study Abroad, Summer 2013</h3>
+        <p>I spent my last semester as a student at UW-Madison in India, where I interned at a microinsurance organization called Parvati ....   
+        </p>
     </section>
-
-    
     <section id='uwcu'>
-        <h3>UW Credit Union</h3>
-        <p>After college, I worked as a bank teller for just under two years. I learned a ton about personal finance while I was there. I also made some of the best friends I've ever had. </p>
+        <h3>Working World: UW Credit Union</h3>
+        <p> For about two years after graduating from college, I worked as a teller at UW Credit Union. While there, I helped to train new employees, held the responsibility of being "vault teller" (i.e., balancing the vault of cash every night), and I met people who became my best friends. I knew finance wasn't my long term career goal and was still looking out for public health-related opportunities, but I wouldn't trade my time at UW Credit Union for anything. 
+        </p>
     </section>
-
-
     <section id='giswmp'>
-        <h3>GIS, Cartography, and Programming</h3>
-        <p>As much as I loved UW Credit Union, I knew it was not a career for me. I was sure I wanted to get into public health, still, but I needed a unique skillset to set myself apart from the crowd. I had been eyeing UW-Madison's GIS Certificate program for many years, and I decided to go for it in 2015. It was one of the best decisions I've ever made. 
-      </br></br>
-
-      
+        <h3>GIS Certificate and Master's Program</h3>
+        <p>
+        From UW Credit Union, I moved just a few blocks to the west and began a program to learn GIS and Cartography. I started the program with little knowledge of what GIS was, aside from that it's a) making maps, and b) is important for public health. I saw GIS as a way to make myself marketable in the public health field, but I also just thought maps were really cool. It's one of the best choices I've ever made in my life, because completing the GIS Certificate and the MS in GIS and Web Map Programming gave me some web design and programming skills that I love using and that set me apart from other people in public health. 
         </p>
     </section>
-
-
     <section id='yale'>
-        <h3>Yale MPH</h3>
-        <p> Yale MPH
+        <h3>Off to New Haven</h3>
+        <p>
+            
+
         </p>
     </section>
-
 </div>
-
-
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibmF0YWxlZWRlc290ZWxsIiwiYSI6ImNqaDRvaGk3cDB1OXgyd253bHAyMjMzNG0ifQ.R6PpkeCYtazBu_nX4PVbaQ';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/nataleedesotell/cjh4ole6f38vv2rpmxswcd68c',
+    style: 'mapbox://styles/mapbox/outdoors-v10',
         bearing: -0,
         center: [-108.866174, 49.272291],
         zoom: 2,
@@ -123,81 +166,54 @@ var chapters = {
         speed: 0.8,
         pitch: 0
     },
-
     'poynette': {
-    bearing: -0,
-    center: [-108.866174, 49.272291],
-    zoom: 2,
-    speed: 0.8,
-    pitch: 0
-},
-
+        bearing: 0,
+        center: [-89.4029, 43.3909],
+        zoom: 14,
+        pitch: 0
+    },
     'mke': {
-    bearing: -0,
-    center: [-108.866174, 49.272291],
-    zoom: 2,
-    speed: 0.8,
-    pitch: 0
-},
+        center: [-87.882915, 43.07503],
+        bearing: 54.40,
+        zoom: 14,
+        speed: 0.6,
+        pitch: 44.50
+    },
     'uwmad': {
-        bearing: -15,
-        center: [-89.405240, 43.075453],
-        zoom: 16.7,
-        pitch: 45
+        bearing: 12.80,
+        center: [-89.4125, 43.0766],
+        zoom: 13.18,
+        speed: 0.6,
+        pitch: 0.00
     },
-
-
-
     'pune': {
-        center: [73.8567, 18.5204],
-        bearing: -150,
-        zoom: 12,
-        speed: 0.6,
-        pitch: 45
-    },
-
-    'uwcu': {
-        center: [-122.580020, 45.533977],
-        bearing: -150,
-        zoom: 16.72,
-        speed: 0.6,
-        pitch: 45
-    },
-    'giswmp': {
-        bearing: -45,
-        center: [-149.903216, 61.198840],
-        zoom: 15.99,
-        speed: 0.6,
-        pitch: 45
-    },
-    'yale': {
         bearing: 60,
-        center: [-134.408720, 58.300388],
+        center: [73.8389, 18.5228],
         zoom: 16.57,
         speed: 0.6,
         pitch: 45
     },
-        'mapbox': {
-        bearing: -29.60,
-        center: [-122.661895, 45.523444],
-        zoom: 16.16,
-        pitch: 18.50,
+    'uwcu': {
+        bearing: 15.20,
+        center: [-89.396843, 43.075062],
+        zoom: 18,
+        pitch: 40.50,
         speed: 0.6
     },
-    'seeya': {
-        bearing: -0,
-        center: [-108.866174, 49.272291],
-        zoom: 2,
-        speed: 0.8,
-        pitch: 0
+    'giswmp': {
+        bearing: 0,
+        center: [-89.400999, 43.075882],
+        zoom: 18,
+        pitch: 30,
+        speed: 0.6
     },
-    'interests': {
+    'yale': {
         bearing: -0,
-        center: [-108.866174, 49.272291],
-        zoom: 2,
+        center: [-72.9223, 41.3163],
+        zoom: 13,
         speed: 0.8,
-        pitch: 0
-    }
+        pitch: 20
+    },
 };
 // On every scroll event, check which element is on screen
 window.onscroll = function() {
@@ -224,6 +240,7 @@ function isElementOnScreen(id) {
     return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
 </script>
-
 </body>
+
+
 </html>

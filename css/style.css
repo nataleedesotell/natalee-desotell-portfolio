@@ -11,6 +11,12 @@ html, body {
 }
 
 
+.footer {
+  text-align: center;
+  font-size: 18pt;
+  width:100%;
+  padding: 10px;
+}
 
 /*//change home page images on hover*/
 
