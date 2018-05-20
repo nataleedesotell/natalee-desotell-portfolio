@@ -133,11 +133,11 @@ padding: 20px;
 .portfolio-thumbnail {
   background-color: #fff;
   width: 95%;
-  border: none;
+  border: 3pt pink;
 }
 
 .portfolio-thumbnail:hover {
-  box-shadow: 5px 5px 5px #2b8e94;
+  box-shadow: 5px 5px 5px #ccc;
 
 }
 
