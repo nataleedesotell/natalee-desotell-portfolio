@@ -12,6 +12,11 @@
   height: auto;
 }
 
+.line {
+  text-decoration: line-through;
+}
+
+
 .overlay {
   position: absolute;
   top: 0;
