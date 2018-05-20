@@ -125,7 +125,7 @@ padding: 20px;
 
 .navbar-header .navbar-toggle:hover,
 .navbar-header .navbar-toggle:focus {
-  background-color: #ebd122;
+  background-color: #2b8e94;
   color: #CBEAA6;
 }
 
@@ -133,10 +133,11 @@ padding: 20px;
 .portfolio-thumbnail {
   background-color: #fff;
   width: 95%;
+  border: none;
 }
 
 .portfolio-thumbnail:hover {
-  box-shadow: 10px 10px 5px #ccc;
+  box-shadow: 5px 5px 5px #2b8e94;
 
 }
 
