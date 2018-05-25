@@ -6,6 +6,41 @@
   width: 50%;
 }*/
 
+.portfolio-description {
+  color: grey;
+  font-size: 1.5rem;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  right:0;
+  top:0;
+  background: rgb(0, 0, 0);
+  background: rgba(255,255,255, 0.6); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+}
+.scone:hover .overlay {
+  opacity: 1;
+}
+
+
+.portfolio-category {
+  background: #2b8e94;
+  color: white;
+  padding: 2%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
 .image {
   display: block;
   width: 100%;
@@ -143,6 +178,7 @@ padding: 20px;
 
 .portfolio-thumbnail:hover {
   box-shadow: 5px 5px 5px #ccc;
+  border-width: 3px;
 
 }
 
