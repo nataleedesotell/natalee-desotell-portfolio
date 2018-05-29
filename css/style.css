@@ -6,6 +6,12 @@
   width: 50%;
 }*/
 
+.header-title {
+  color:white;
+  font-family: 'Raleway', sans-serif; 
+  font-size: 2rem;
+}
+
 .portfolio-description {
   color: grey;
   font-size: 1.5rem;
