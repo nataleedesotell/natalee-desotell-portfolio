@@ -26,18 +26,21 @@ img {
   background-color: #dddddd;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 5px #dddddd;
+  box-shadow: 2px 5px #dddddd;
 }
 
 .portfolio-thumbnail:hover {
-  background-color: #ccc;
-  box-shadow: 0 5px #ccc;
+  background-color: #dddddd;
+  box-shadow: 0 2px #dddddd;
+  border-radius: 15px;
+  transform: translateY(2px);
 }
 
 
 .portfolio-thumbnail:active {
-  background-color: #ccc;
-  box-shadow: 0 5px #dddddd;
+  background-color: #dddddd;
+  box-shadow: 0 2px #dddddd;
+  border-radius: 15px;
   transform: translateY(4px);
 }
 
