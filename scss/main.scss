@@ -1,0 +1,420 @@
+@import 'variables';
+@import 'dragula';
+@import 'simple-grid';
+@import 'mixins';
+
+.alc-learn--container {
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  min-height: $container-height;
+  width: $container-width;
+  // font-family: Arial, sans-serif;
+  background-color: $teal;
+  color: $blue;
+  padding: 24px;
+  box-sizing: border-box;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.alc-learn--success-message {
+  font-size: 28px;
+  color: $blue;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: 8px solid $blue;
+  background-color: $blue-light;
+  border-radius: $border-radius;
+}
+
+//
+// Module: Night Out
+//
+
+#alc-learn--night-out__slide-two {
+  background-color: $blue-med;
+}
+
+#alc-learn--night-out__slide-three {
+  background-color: $peach;
+}
+
+#alc-learn--night-out__slide-four {
+  background-color: $pumpkin;
+}
+
+.alc-learn--night-out__prompt {
+  margin-top: 0;
+  margin-bottom: 50px;
+  line-height: 40px;
+}
+
+.alc-learn--night-out__response {
+  min-width: 300px;
+  display: inline-block;
+  border-bottom: 3px solid $blue;
+  min-height: 34px;
+  height: 34px;
+  padding: 0px 16px 0px;
+  vertical-align: bottom;
+
+  // For special case when items will take up more than one line (see slide 5)
+  &.alc-learn-full-width {
+    height: auto;
+    display: block;
+    text-align: center;
+    margin: 11px 0;
+  }
+
+  .alc-learn--night-out__item {
+    margin: 0;
+    line-height: 18px;
+    -webkit-transform: translate(0px, 0px) !important;
+    transform: translate(0px, 0px) !important;
+  }
+}
+
+.alc-learn--night-out__item {
+  display: inline-block;
+  margin: 16px 16px 16px 0;
+  font-size: 28px;
+  line-height: 30px;
+  padding: 0px 8px;
+  position: relative;
+  transition: -webkit-transform .8s, transform .8s;
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.alc-learn--night-out__word-cloud {
+  text-align: center;
+}
+
+.alc-learn--night-out__success {
+  @extend .alc-learn--success-message;
+  font-size: 22px;
+  display: none;
+}
+
+//
+// Module: Dialogue
+//
+
+#alc-learn--dialogue__slide-one, #alc-learn--dialogue__slide-two, #alc-learn--dialogue__slide-three {
+  font-size: 18px;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+#alc-learn--dialogue__slide-one {
+  .talk-bubble__color-1 {
+    @include bubble-color($tan, $rose);
+  }
+  .talk-bubble__color-2 {
+    @include bubble-color($rose, $neon);
+  }
+  .talk-bubble__color-3 {
+    @include bubble-color($peach, $rose);
+  }
+  .talk-bubble__color-4 {
+    @include bubble-color($yellow, $green);
+  }
+}
+
+#alc-learn--dialogue__slide-two {
+  background-color: $tan;
+
+  .talk-bubble__color-1 {
+    @include bubble-color($blue-med, $blue-light);
+  }
+  .talk-bubble__color-2 {
+    @include bubble-color($rose, $yellow);
+  }
+  .talk-bubble__color-3 {
+    @include bubble-color($teal-dark, $purple-light);
+  }
+  .talk-bubble__color-4 {
+    @include bubble-color($yellow, $green);
+  }
+}
+
+#alc-learn--dialogue__slide-three {
+  background-color: $peach;
+
+  .talk-bubble__color-1 {
+    @include bubble-color($blue-med, $blue-light);
+  }
+  .talk-bubble__color-2 {
+    @include bubble-color($rose, $yellow);
+  }
+  .talk-bubble__color-3 {
+    @include bubble-color($teal-dark, $purple-light);
+  }
+  .talk-bubble__color-4 {
+    @include bubble-color($yellow, $green);
+  }
+}
+
+#alc-learn--dialogue__prompt, #alc-learn--dialogue__answers {
+  .talk-bubble {
+    display: none;
+  }
+}
+
+#alc-learn--dialogue__prompt {
+  .talk-bubble {
+    @include bubble-color($green, $blue-light);
+  }
+}
+
+#alc-learn--dialogue__answers {
+  padding-top: 100px;
+}
+
+#alc-learn--dialogue__answers {
+  .talk-bubble {
+    cursor: pointer;
+  }
+}
+
+#alc-learn--dialogue__moral {
+  @extend .alc-learn--success-message;
+  display: none;
+}
+
+// Dialogue bubble code taken from https://codepen.io/Founts/pen/gmhcl
+
+.talk-bubble {
+	margin: 40px auto 60px;
+  display: inline-block;
+  position: relative;
+	width: 80%;
+  padding-left: 10px;
+	height: auto;
+  border: 8px solid;
+  border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+
+  .yoac-choose {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    margin-top: -19px;
+    animation: back-and-forth 1s ease-out infinite;
+  }
+
+  &.yoac__selected {
+    .yoac-choose {
+      display: none;
+    }
+  }
+}
+
+/* The animation code */
+@keyframes back-and-forth {
+    from {
+      -webkit-transform: translateX(0)
+    }
+    50% {
+      -webkit-transform: translateX(-5px)
+    }
+    100% {
+      -webkit-transform: translateX(0)
+    }
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+
+.tri-right.border.btm-left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: $green transparent transparent $green;
+}
+.tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: $green transparent transparent $green;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: $green $green transparent transparent;
+}
+
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 38px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: $green $green transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext {
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+
+.talktext p {
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+//
+// Module: Reorder
+//
+
+#alc-learn--reorder {
+  color: $blue;
+}
+
+#alc-learn--reorder__list {
+  width: 70%;
+  margin: auto;
+}
+
+.alc-learn--reorder__list-item {
+  background-color: $green;
+  color: $blue-light;
+  border-radius: $border-radius;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 20px;
+
+  &.gu-mirror {
+    list-style-type: none;
+  }
+}
+
+#alc-learn--reorder__success {
+  @extend .alc-learn--success-message;
+  display: none;
+}
+
+//
+// Module: Storyboard
+//
+
+#alc-learn--storyboard-1 {
+  background-color: $purple;
+
+  #alc-learn-storyboard__strip {
+    box-shadow: 0 19px 16px $purple, 0 0px 5px 1px #616161 inset;
+  }
+}
+
+#alc-learn--storyboard-2 {
+  background-color: $yellow;
+
+  #alc-learn-storyboard__strip {
+    box-shadow: 0 19px 16px $yellow, 0 0px 5px 1px #616161 inset;
+  }
+}
+
+#alc-learn--storyboard-3 {
+  background-color: $blue-light;
+
+  #alc-learn-storyboard__strip {
+    box-shadow: 0 19px 16px $blue-light, 0 0px 5px 1px #616161 inset;
+  }
+}
+
+#alc-learn--storyboard-4 {
+  background-color: $pumpkin;
+
+  #alc-learn-storyboard__strip {
+    box-shadow: 0 19px 16px $pumpkin, 0 0px 5px 1px #616161 inset;
+  }
+}
+
+
+#alc-learn-storyboard__strip {
+  min-height: 210px;
+  background-color: rgba(101, 101, 101, 0.29);
+  border-radius: $border-radius;
+  padding: 8px;
+  box-sizing: border-box;
+  z-index: 10;
+  position: relative;
+}
+
+.alc-learn-storyboard__strip-instructions {
+  margin: auto;
+  text-align: center;
+  margin-top: 80px;
+  color: #555;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#alc-learn-storyboard__icon-container {
+  height: 800px;
+  overflow-y: scroll;
+}
+
+.alc-learn-storyboard__thumb {
+  max-width: 100% !important; //instructure.com tries to override this max-width
+  cursor: pointer;
+
+  &:hover {
+    outline: 3px solid $blue;
+  }
+}
+
+
+// // David's additional styles
+//
+//
+// /* no right side nav */
+// .with-right-side #right-side-wrapper {
+//     display: none;
+// }
+//
+// .pages .header-bar-outer-container {
+//     display: none;
+// }
+//
+// #course_show_secondary {
+//     display: none;
+// }
+//
+// #right-side > div.events_list.coming_up{
+//     display: none;
+// }
