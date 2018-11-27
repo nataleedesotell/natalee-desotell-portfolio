@@ -116,33 +116,6 @@
     {
       "type": "Feature",
       "properties": {
-        "RegionID": 12447,
-        "toGeocode": "Yamuna at Shahpur",
-        "SizeRank": 2,
-        "2003": 0.00,
-        "2004": 0.00,
-        "2005": 0.00,
-        "2006": 0.00,                   
-        "2007": 0.00,
-        "2008": 0.00,
-        "2009": 0.00,
-        "2010": 61250.00,
-        "2011": 37000.00,
-        "2012": 25818.00,
-        "2013": 26200.00,
-        "2014": 34818.00,
-        "2016": 33000.00
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          80.2471490,    26.4739920
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "RegionID": 54296,
         "toGeocode": "Yamuna at Etawah",
         "SizeRank": 9,

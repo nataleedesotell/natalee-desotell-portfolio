@@ -1,16 +1,13 @@
 var map = L.map('map', {
-  center: [37.729986, -96.426741],
-  zoom: 4,
+  center: [28.6139, 77.2090],
+  zoom: 9,
   minZoom: 4,
-  maxZoom: 9,
+  maxZoom: 16,
   zoomControl: false,
 });
 
-
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    //the max level of zoom allowed
-    //my unique id and accessToken
     id:'mapbox.streets',
     accessToken:'pk.eyJ1IjoibmF0YWxlZWRlc290ZWxsIiwiYSI6ImNqbzYyb3BtbjBnNzUzcXFtN3JycWJvMzAifQ.yBDabAw2e-7FOB7GAnFagA'
 }).addTo(map);
@@ -21,8 +18,8 @@ $.ajax("data/fc.geojson", {
 
     //create a Leaflet GeoJSON Cluster Group layer
     var priceToRentRatiosClusterGroup = L.markerClusterGroup({
-      showCoverageOnHover: false,
-      maxClusterRadius: 2,
+      showCoverageOnHover: true,
+      maxClusterRadius: 1, 
       removeOutsideVisibleBounds: false,
       iconCreateFunction: function(cluster) {
         /*var childCount = cluster.getChildCount();
@@ -112,9 +109,9 @@ $.ajax("data/fc.geojson", {
         return L.circleMarker(latlng, {
           //circleMarkerOptions
           radius: calcPropRadius(feature.properties['2016']),
-          fillColor: '#01afd1',
+          fillColor: '#C71585',
           color: "#fff",
-          weight: 0.1,
+          weight: 0.0,
           opacity: 0.8,
           fillOpacity: 0.8
         });
@@ -169,7 +166,7 @@ function onEachFeaturePopupSetup(layer, popupContent) {
 
 function generatePopup(feature, attribute) {
   return '<strong>' + feature.properties['toGeocode'] + '</strong>' + '</br>'
-    + '<span class="popupAttributeLabel">Fecal Coliform Mean Level <em>(' + attribute + ')</em></span>' + '</br>'
+    + '<span class="popupAttributeLabel">Fecal Coliform Mean Level (MPN/100 mL) <em>(' + attribute + ')</em></span>' + '</br>'
     + '<span class="popupAttributeValue">' + feature.properties[attribute];
 }
 
@@ -181,12 +178,10 @@ function onEachFeature(feature, layer) {
 function calcPropRadius(attValue) {
 
     var radius;
-
-    //continuous values
     //scale factor to adjust symbol size evenly
-    var scaleFactor = 0.0000001;
-    //radius calculated based on area
-    radius = (attValue*scaleFactor)+20;
+    var scaleFactor = 1;
+    //radius calculated
+    radius = Math.log(attValue*scaleFactor);
 
     //discrete values
     /*if (attValue <= 10) {
@@ -208,16 +203,22 @@ function calcSymbolColor(attValue) {
 
   var color;
 
-  if (attValue <= 0) {
+  if (attValue <= 0.00) {
     color = '#cccccc';
-  } else if (attValue > 0 && attValue <= 100) {
-    color = '#fdbe85';
-  } else if (attValue > 100 && attValue <= 1000) {
-    color = '#fd8d3c';
-  } else if (attValue > 1000 && attValue <= 10000) {
-    color = '#e6550d';
-  } else if (attValue > 10000) {
-    color = '#a63603';
+  } else if (attValue > 0.00 && attValue <= 100.00) {
+    color = '#f1eef6';
+  } else if (attValue > 100.001 && attValue <= 1000.00) {
+    color = '#d4b9da';
+  } else if (attValue > 1000.01 && attValue <= 10000.00) {
+    color = '#c994c7';
+  } else if (attValue > 10000.01 && attValue <= 100000.00) {
+    color = '#df65b0';
+  } else if (attValue > 100000.01 && attValue <= 1000000.00) {
+    color = '#e7298a';
+  } else if (attValue > 1000000.01 && attValue <= 10000000.00) {
+    color = '#ce1256';
+  } else if (attValue > 10000000.01) {
+    color = '#91003f';
   } else {
     console.log('attribute value not accounted for!');
   }
@@ -243,6 +244,7 @@ function extractAttributeLabels(data) {
   return attributes;
 }
 
+
 $('#title .fa').tooltip({
-  content: 'A city\'s price-to-rent ratio measures how expensive it is to rent housing in that area, relative to owning it. A high ratio means that rental housing is significantly more expensive in that city, relative to the price of homes in the surrounding area.',
+  content: 'The Yamuna is India\'s most polluted river, and fecal coliform is one measure of that can indicate how safe it is for drinking, bathing, or agriculture. These data were retrieved from Open Data India.',
 });

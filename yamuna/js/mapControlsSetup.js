@@ -3,7 +3,7 @@ function setupControls(map, attributes, clusterGroup) {
   function generateLegendHtml(symbolization, labels) {
     var legendHtml = ''
     +'<div id="attributeText">'
-      +'Fecal Coliform Mean</br>Level <span>2016</span>'
+      +'Fecal Coliform Mean</br>Level (MPN/100 mL) <span>2016</span>'
     +'</div>'
     +'<div id="legendSymbols">';
     for (i=0; i<labels.length; i++) {
@@ -31,33 +31,33 @@ function setupControls(map, attributes, clusterGroup) {
     +'<label for="color">Color</label>'
   +'</div>';
 
-  $('#dialog').html(generateLegendHtml('size',[19,14,9]));
+  $('#dialog').html(generateLegendHtml('size',[1900000000,35000,40]));
   $('#dialog').dialog({
     width: 300,
-    height: 200,
+    height: 300,
     dialogClass: 'legend',
     resizable: false,
-    closeText: 'Expand',
+    // closeText: 'Expand',
     //this function controls what happens when you press the close button
-    beforeClose: function () {
-      window.alert('Sorry, this functionality has not been implemented yet!');
-      return false;
-    },
+    // beforeClose: function () {
+    //   window.alert('Sorry, this functionality has not been implemented yet!');
+    //   return false;
+    // },
   });
 
   //Once the dialog box is open, we add a similarly-styled button to the header
   //First, select the existing close button...
-  $('.legend .ui-dialog-titlebar .ui-dialog-titlebar-close[title="Expand"] .ui-icon')
-    //remove extraneous classes
-    .removeClass('ui-icon-closethick').removeClass('ui-button-icon-primary')
-    //jQueryUI comes with class for pretty icons
-    .addClass('ui-icon-plus');
+  // $('.legend .ui-dialog-titlebar .ui-dialog-titlebar-close[title="Expand"] .ui-icon')
+  //   //remove extraneous classes
+  //   .removeClass('ui-icon-closethick').removeClass('ui-button-icon-primary')
+  //   //jQueryUI comes with class for pretty icons
+  //   .addClass('ui-icon-plus');
   //Then, we clone the existing close button, and append the copy
-  $('.legend .ui-dialog-titlebar').append(
-    $('.legend .ui-dialog-titlebar-close').clone()
-    //then we move it over a bit and change its title attribute so we can identify it
-    .css('right', '28px').attr('title', 'Dock')
-  );
+  // $('.legend .ui-dialog-titlebar').append(
+  //   $('.legend .ui-dialog-titlebar-close').clone()
+  //   //then we move it over a bit and change its title attribute so we can identify it
+  //   .css('right', '28px').attr('title', 'Dock')
+  // );
   //Now, select the icon within the cloned copy, like above
   $('.legend .ui-dialog-titlebar .ui-dialog-titlebar-close[title="Dock"] .ui-icon')
     //swap classes to get the icon we want
@@ -87,12 +87,12 @@ function setupControls(map, attributes, clusterGroup) {
   //change the legend and update the symbols when the symbolization is changed
   $('#symbolizationPicker label[for="size"]').on('click', function() {
     symbolization = 'size';
-    $('#dialog').html(generateLegendHtml(symbolization,[19,14,9]));
+    $('#dialog').html(generateLegendHtml(symbolization,[1900000000,35000,40]));
     updateProportionalSymbols( {value: $('#slider').slider('value')} );
   });
   $('#symbolizationPicker label[for="color"]').on('click', function() {
     symbolization = 'color';
-    $('#dialog').html(generateLegendHtml(symbolization,['< 10','10 - 12.5','12.5 - 15','15 - 17.5','< 17.5']));
+    $('#dialog').html(generateLegendHtml(symbolization,['< 100','100-1K','1K-10K','10K-100K','100K-1M', '1M-10M', '>10M']));
     updateProportionalSymbols( {value: $('#slider').slider('value')} );
   });
 
@@ -130,7 +130,7 @@ function setupControls(map, attributes, clusterGroup) {
     var props = layer.feature.properties;
 
     if (symbolization === 'size') {
-      layer.setStyle({fillColor: '#01afd1'});
+      layer.setStyle({fillColor: '#C71585'});
       //update each feature's radius based on new attribute values
       if (props[attributes[attribute]]) {
         layer.setRadius(calcPropRadius(props[attributes[attribute]]));
