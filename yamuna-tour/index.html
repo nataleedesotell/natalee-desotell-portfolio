@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="keywords" content="maps, cartography"/>
+        <link rel="icon" href="./assets/favi.png">
+        <title>Yamuna Tour</title>
+
+        <!--put your Bootstrap stylesheet links below this comment and above style.css-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- emojis -->
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/bb1ec1563f.js"></script>
+
+
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<!--             <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+                        <span class="glyphicon glyphicon-menu-hamburger"></span><span class="mobile-menu"> Menu</span>
+              </button> 
+                <a class = "navbar-brand" href="index.html" class="navbar-left navbar-brand"><img src="./assets/natalee.png"></a>  
+            </div> 
+           <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resume.pdf">Resume</a></li>
+                        <li><a href="resumap.html">Resumap</a></li>
+                        <li><a href="writing.html">Writing</a></li>
+              </ul>
+            </div> 
+          </div> 
+        </nav> 
+ -->
+
+
+
+<style>
+#map {
+    position: fixed;
+    width:40%;
+}
+#features {
+    width: 60%;
+    margin-left: 40%;
+    font-family: Tw Cen MT;
+    overflow-y: scroll;
+    background-color: #fafafa;
+}
+section {
+    padding:  25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 20px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 1000px;
+}
+</style>
+
+
+
+<!-- STATION NAME    LAT LONG
+1069    YAMUNA AT ALLAHABAD D/S (BALUA GHAT), U.P   25.422365   81.839227
+1129    YAMUNA AT ALLAHABAD. U.P.   25.423974   81.881735
+2283    YAMUNA AT HAMIRPUR  25.958588   80.157926
+1499    YAMUNA AT JUHIKA B/C WITH CHANBAL, ETAWAH, U.P  26.43721    79.212615
+2493    YAMUNA AT SHAHPUR   26.473992   80.247149
+1127    YAMUNA AT ETAWAH, U.P.  26.75624    79.014436
+1498    YAMUNA AT BATESWAR, U.P 26.934216   78.542118
+1126    YAMUNA AT D/S OF AGRA, U.P. 27.199965   78.085944
+1125    YAMUNA AT AGRA U/S, U.P.    27.207595   78.035377
+1124    YAMUNA AT MATHURA D/S , U.P.    27.442535   77.715819
+2494    YAMUNA AT VISHRAMGHAT, MATHURA  27.504882   77.686467
+1123    YAMUNA AT MATHURA U/S , U.P.    27.512278   77.683187
+2495    YAMUNA AT KESIGHAT, VRINDAVAN   27.587979   77.698991
+1497    YAMUNA AT MAZAWALI (MANJHAWALI), U.P    28.37104    77.489326
+1375    YAMUNA AT OKHLA BRIDGE (INLET OF AGRA CANAL), DELHI 28.54648    77.313416
+1812    YAMUNA AT OKHLA AFTER MEETING OF SHAHDARA DRAIN, DELHI  28.558922   77.301573
+
+
+ -->
+
+
+<div id='map'></div>
+<div id='features'>
+    <section id='india' class='active'>
+    </br>  
+        <h3>India's Yamuna River <i class="em em-flag-in"></i> </h3>
+        <p class="resumap-text"></p>
+        The Yamuna river is 855 miles long, which is about the same distance from here to Chicago.
+    </section>
+
+    <section id='yamunotri' class='active'>
+        <h3>Yamunotri</h3>
+        <img src="yamunotri.jpg" alt="Yamunotri" style="width:400px;">
+        <p class="resumap-text">The river starts up at Yamunotri, where there's a temple dedicated to the Goddess Yamuna and some hot springs. Several kilometers north of the temple, up into the Himalayas, is the source of the river: the Champasar Glacier.</p>
+    </section>
+
+    <section id='dakpatthar' class='active'>
+        <h3>Dakpathar</h3>
+        <p class="resumap-text"></p>
+     The Dakpathar Barrage is a concrete dam across the Yamuna River. It diverts water into the East Yamuna Canal for hydroelectric power production at two Power Plants. Construction began in 1949 and was finished in 1965, delayed due to funding. 
+    <img src="dakpatharbarrage.jpg" alt="Dakpathar" style="width:400px;">
+
+    </section>
+
+    <section id='PAONTASAHIB' class='active'>
+        <h3>Paonta Sahib</h3>
+        <p class="resumap-text"></p>
+        Paonta Sahib is an industrial town on the Yamuna that is involved in the pharmaceutical, hydroelectric, and dairy industries. Its population is a bit higher than New Haven's, at about 150,000 people. It is also an important place of worship for Sikhs, with a giant Gurudwara right on the river. </br>
+    <img src="paontasahib.jpg" alt="Paonta Sahib" style="width:400px;">
+    </section>
+
+    <section id='yamunanagar' class='active'>
+        <h3>Yamunanagar</h3>
+        <p class="resumap-text"></p>
+        Yamunanagar is known for its industry, a sprawling city with exploding population due to immigration. Its main industries are paper manufacturing and sugar machinery. 
+    
+    <img src="yamunanagar.jpg" alt="Yamunanagar" style="width:400px;">
+    </section>
+
+    <section id='delhi' class='active'>
+        <h3>Delhi</h3>
+        <p class="resumap-text"></p>
+        Delhi is the center of the Yamuna's pollution problems. The demand for water in Delhi is far above what its several treatment plants can supply. Delhi requires 1,200 mgd, but DJB has been able to supply only 860 mgd this summer. One issue is the "tanker mafia" -- stolen clean water is sold at a premium to the people who need it. Nearly half of the water released from DJB is stolen. Against a generation of over 1,000 mgd of sewage in 2015, Delhi has a treatment capacity of only around 700 mgd. This means a lot of the sewage generated by the city enters the Yamuna. 
+
+        <a href="https://www.financialexpress.com/opinion/waste-water-plan-good-but-delhi-must-address-treatment-capacity/1244292/">(Financial Express, 2018) </a>
+
+
+    </section>
+
+    <section id='agra' class='active'>
+        <h3>Agra</h3>
+        <p class="resumap-text"></p>
+ 
+                <img src="agra.jpg" alt="agra" style="width:400px;"></br> <p>Photo from Japan Times.</p>
+                <img src="agra2.jpg" alt="agra2" style="width:400px;">
+    </section>
+
+
+    <section id='allahbad' class = 'active'>
+        <h3>Prayagraj</h3>
+        <p class="resumap-text"></p>
+        Formerly Allahbad, but known as Prayagraj since October 2018. 
+        In Hindu tradition Triveni Sangam is the confluence of three rivers. The point of confluence is a sacred place for Hindus. A bath here is said to flush away all of one's sins and free one from the cycle of rebirth. A place of religious importance and the site for historic Kumbh Mela held every 12 years, over the years it has also been the site of immersion of ashes of several national leaders, including Mahatma Gandhi in 1948.
+
+        <img src="sangam.jpg" alt="sangam" style="width:400px;">
+    </section>
+</div>
+
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibmF0YWxlZWRlc290ZWxsIiwiYSI6ImNqb2ZjaHgxdjAyeWgza216emxwaDlxaHQifQ.9wbVo_vUrfrXoX-Sm_tU1Q';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/outdoors-v10',
+        bearing: -0,
+        center: [78.9629, 20.5937],
+        zoom: 4,
+        speed: 1,
+        pitch: 0
+});
+
+var activeChapterName = 'baker';
+var chapters = {
+    'india': {
+        bearing: -0,
+        center: [78.9629, 20.5937],
+        zoom: 4,
+        speed: 1,
+        pitch: 0
+    },
+    'yamunotri': {
+        bearing: 0,
+        center: [78.457119, 30.991106],
+        zoom: 13,
+        pitch: 0,
+        speed: 1
+    },
+    'dakpatthar': {
+        bearing: 0,
+        center: [  77.794715, 30.503425 ],
+        zoom: 13,
+        pitch: 13,
+        speed: 1
+    },
+    'PAONTASAHIB': {
+        bearing: 0,
+        center: [77.622599, 30.434835],
+        zoom: 17,
+        pitch: 0,
+        speed: 0.3
+    },
+    'yamunanagar': {
+        bearing: 2,
+        center: [77.3511060,  30.0695930],
+        zoom: 10,
+        pitch: 4,
+        speed: 2
+    },
+    'delhi': {
+        bearing: 0,
+        center: [77.232445, 28.705793],
+        zoom: 14,
+        pitch: 20
+
+    },
+    'agra': {
+        center: [78.042164, 27.175037],
+        bearing: 54.40,
+        zoom: 14,
+        speed: 0.6,
+        pitch: 44.50
+    },
+
+    'allahbad': {
+        bearing: 30,
+        center: [81.887177, 25.422051],
+        zoom: 10,
+        speed: 0.6,
+        pitch: 45
+    },
+};
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'baker';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+</body>
+
+
+</html>
