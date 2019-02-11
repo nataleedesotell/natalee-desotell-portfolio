@@ -2,6 +2,14 @@
 @import 'simple-grid';
 @import 'mixins';
 
+
+.aodhrimargin {
+  margin-left: 10pt;
+  align-items: center;
+  margin: right: 100px;
+  padding: 10%;
+}
+
 /*START COLORS*/
 .yoac-papaya {
   color: #ff471a; }
