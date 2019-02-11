@@ -495,16 +495,14 @@
 
 
 
-
 body {
   margin: 0;
-  padding: 0 0.8em;
   color: #111;
   background: #fff;
   font-family:'trebuchet ms', 'lucida grande', 'lucida sans unicode', arial, helvetica, sans-serif;
   font-size: 0.9em;
   line-height: 1.5;
-  max-width: 800px;
+  max-width: 100%;
   min-width: 600px;
   margin: auto;
   text-align: left;

@@ -23,7 +23,7 @@ var btn = document.createElement("BUTTON");
     // alert('Success!')
     // $nextButton.show();
     console.log("allowNext was called")
-	alert("Next button triggered");
+	alert("Module complete! Nice work.");
   }
 
   //NIGHT OUT SCRIPT
