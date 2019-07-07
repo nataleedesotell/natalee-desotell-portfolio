@@ -73,10 +73,6 @@ img {
   padding: 0px;
   text-align: center;
 }
-.scone:hover .overlay {
-  opacity: 1;
-}
-
 
 .portfolio-category {
   background: #2b8e94;
