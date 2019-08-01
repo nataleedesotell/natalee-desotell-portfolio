@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="keywords" content="maps, cartography"/>
+        <link rel="icon" href="./assets/favi.png">
+        <title>Natalee Desotell</title>
+        <link href="aodhri-course-accessible.css" rel="stylesheet" type="text/css">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+
+        <!--put your Bootstrap stylesheet links below this comment and above style.css-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://use.fontawesome.com/41889622a9.js"></script>
+    </head>
+
+
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top"> <!-- Creates the navbar -->
+          <div class="container">
+            <div class="navbar-header"> <!-- Creates the navbar header -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span> <!-- Used for screen readers for accessibility -->
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        <span class="menu"> Menu</span>
+                    </button> <!-- Hamburger button for smaller devices -->
+                    <a class = "navbar-brand" href="index.html" class="navbar-left navbar-brand"><img src="./assets/natalee.png"></a>   <!-- Your website brand name -->
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse"> <!-- Links to include in navbar -->
+              <ul class="nav navbar-nav">  <!-- Unordered list for links on navbar -->
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="resume.pdf">Resume</a></li>
+                        <li><a href="resumap.html">Resumap</a></li>
+                        <li><a href="writing.html">Writing</a></li>
+              </ul>
+            </div> <!-- end .navbar-collapse -->
+          </div> <!-- end .container -->
+        </nav> <!-- end navigation bar -->
+
+        <div class="jumbotron">
+            <div class="container header-title">
+                <h1>tableau portfolio</h1>
+            </div>
+        </div>
+
+        <p class = 'tableauPortfolio' style="font-style:bold"> 
+            Hi, thanks for checking out my work! I haven't had the opportunity to play with Tableau in school or work, so I spent a little time with a free trial to demonstrate that I can hold my own in the land of Tableau. Without a specific visualization goal in mind, I perused NY Open Data for ideas. Below, you'll find a few examples of what I can do in Tableau (so far).
+        </p> 
+
+        <br>
+        <hr>
+        <br>
+
+        <p class = 'tableauPortfolio'>This map utilizes the Wi-Fi in Public Space dataset. I came across the <a href="https://data.cityofnewyork.us/City-Government/Wi-Fi-in-Public-Space-Open-Space-/npnk-wrj8"> dataset</a> after looking specifically for something new (it was just created this month!) and at first I couldn't believe what I was reading. Having come from rural Wisconsin, the thought of parks having their own Wi-Fi is wild to me. I plotted the dataset and colored the dots by whether the Wi-Fi is simply near or within the public space. Then, I implemented a responsive tooltip to show the name of the open space and the the neighborhood where it's located. To add a little visual interest, I added a choropleth map layer based on per capita income in 2016 (Tableau needs to update their data sources!). I don't know if there's any spatial relationship between these variables, but I wanted to demonstrate that I do know how to add a layer underneath my point data.</p>
+
+            <div class='tableauPlaceholder' style='width: 1000px; height: 667px;'>
+                <object class='tableauViz' width='1000px' height='667' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-a.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;nataleedesotell' /><param name='name' value='Wi-FiinPublicSpaces-NewYorkCity&#47;Wi-FiinPublicSpaces-NewYorkCity' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' />
+                </object>
+            </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <p class = 'tableauPortfolio'> To demonstrate my non-map data visualization skills in Tableau, I stepped away from my usual interests of health and social welfare and looked at film permits by type and borough since 2012. Unsprisingly, Manhattan leads the pack in permits year after year in each category. Brooklyn isn't far behind when it comes to TV, though.</p>
+            <div class='tableauPlaceholder' style='width: 1000px; height: 667px;'>
+                <object class='tableauViz' width='1000' height='667' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-a.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;nataleedesotell' /><param name='name' value='FilmPermitsinNYCSince2012&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' />
+                </object>
+            </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <p class = 'tableauPortfolio'> Lastly, I used a piece of data that I'm intimately familiar with: opioid deaths in Connecticut. This is a small piece of my thesis data, and it shows the total count of fentanyl-involved deaths by ZIP code from 2009-2017. As you can imagine, many of these deaths were in recent years. I used this opportunity to test if it was possible to create a map with a simple white background. Woohoo, I can! </p>
+            <script type='text/javascript' src='https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js'>
+            </script><div class='tableauPlaceholder' style='width: 1000px; height: 716px;'>
+                <object class='tableauViz' width='1000' height='716' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-a.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;nataleedesotell' /><param name='name' value='Fentanyl-InvolvedDeathsinCT2009-2017&#47;Fentanyl-InvolvedDeathsinCT2009-2017' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' />
+                </object>
+            </div>
+
+        <br>
+        <hr>
+        <br>
+
+
+        <p class = 'tableauPortfolio' style="font-style:bold"> 
+            Thank you for going on this little journey with me. I learned that I can indeed pick up a new technology in just a couple hours! But more importantly, I learned that I really  want to work more with Tableau. 
+        </p> 
+
+        <br>
+        <br>
+
+
+        <!--put your external script links here-->
+        <script type='text/javascript' src='https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+        <script type='text/javascript' src='https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+        <script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    </body>
+         <div class="footer" style="background-color:lightgrey">
+            <p>&copy; 2019 Natalee Desotell.</p>
+        </div>
+</html>

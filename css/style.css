@@ -281,3 +281,31 @@ body {
   background-color: white;
   color: #242424;
 }
+
+.tableauPlaceholder {
+  margin: 2%;
+  align-self: center;
+  align-content: center;
+}
+
+.tableauViz {
+  margin: 2%;
+  align-self: center;
+  align-content: center;
+}
+
+.tableauPortfolio {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1em;
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-style: inset;
+  border-width: 1px;
+}
