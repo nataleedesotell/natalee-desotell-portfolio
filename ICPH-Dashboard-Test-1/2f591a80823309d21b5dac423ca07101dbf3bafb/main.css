@@ -17972,7 +17972,8 @@ iframe {
 }
 
 .entry-header {
-    background-color: #ff8f9a;
+/*  background-color: #ff8f9a;*/
+    background: linear-gradient(90deg, rgba(255,106,121,1) 0%, rgba(255,255,255,1) 100%);
     min-height: 400px
 }
 
