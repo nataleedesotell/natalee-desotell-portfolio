@@ -8366,7 +8366,7 @@ input[type=submit].btn-block {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    background-color: #212063
+    background-color: #212063;
 }
 
 .custom-control-input:focus~.custom-control-label::before {
@@ -17829,8 +17829,9 @@ iframe {
 }
 
 .mm-menu.mm-menu_theme-dark {
-    background: #212063;
-    color: #fff
+    background: #ff6a79;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 .mm-menu.mm-menu_theme-dark .mm-navbar a,
