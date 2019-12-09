@@ -7409,11 +7409,12 @@ input[type=submit].btn-block {
     padding: .25rem 1.5rem;
     clear: both;
     font-weight: 400;
-    color: #212063;
+    color: #ff4557;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
-    border: 0
+    border: 0;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 .dropdown-item:focus,
@@ -9124,7 +9125,8 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #fff
+    color: #ef495a;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -10906,7 +10908,7 @@ button.close {
 }
 
 .bg-primary {
-    background-color: #212063!important
+    background-color: #ffffff!important
 }
 
 a.bg-primary:focus,
@@ -13865,7 +13867,8 @@ figure,
 img,
 img.wp-post-image {
     max-width: 100%;
-    height: auto
+    height: auto;
+    padding: 2%;
 }
 
 a.skip-link {
@@ -13983,7 +13986,7 @@ a.skip-link {
  * @requires jQuery 1.7.0 or later
  *
  * mmenu.frebsite.nl
- *	
+ *  
  * Copyright (c) Fred Heusschen
  * www.frebsite.nl
  *
@@ -17963,7 +17966,7 @@ iframe {
 }
 
 .entry-header {
-    background-color: #0cb8f3;
+    background-color: #ff8f9a;
     min-height: 400px
 }
 
@@ -18500,11 +18503,19 @@ iframe {
     margin-bottom: 0
 }
 
-.info-to-use {
+.info-to-useA {
+    background: #ffb5bc;
+    color: #ff4557;
+    border-bottom: 4px solid #fff;
+    position: relative
+}
+
+.info-to-useB {
     background: #d3d2e0;
     border-bottom: 4px solid #fff;
     position: relative
 }
+
 
 .info-to-use--3::after,
 .info-to-use--4::after {
