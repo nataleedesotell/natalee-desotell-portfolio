@@ -126,7 +126,7 @@
     color: inherit
 }
 
-.is-style-squared .wp-block-button__link {
+.is-style-squa#fff .wp-block-button__link {
     border-radius: 0
 }
 
@@ -1208,7 +1208,7 @@ p.wp-block-subhead {
     background-color: #f3f4f5
 }
 
-.wp-block-table.has-subtle-pale-green-background-color {
+.wp-block-table.has-subtle-pale-#fff-background-color {
     background-color: #e9fbe5
 }
 
@@ -1216,7 +1216,7 @@ p.wp-block-subhead {
     background-color: #e7f5fe
 }
 
-.wp-block-table.has-subtle-pale-pink-background-color {
+.wp-block-table.has-subtle-pale-#fff-background-color {
     background-color: #fcf0ef
 }
 
@@ -1232,7 +1232,7 @@ p.wp-block-subhead {
     background-color: #f3f4f5
 }
 
-.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tr:nth-child(odd) {
+.wp-block-table.is-style-stripes.has-subtle-pale-#fff-background-color tr:nth-child(odd) {
     background-color: #e9fbe5
 }
 
@@ -1240,7 +1240,7 @@ p.wp-block-subhead {
     background-color: #e7f5fe
 }
 
-.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tr:nth-child(odd) {
+.wp-block-table.is-style-stripes.has-subtle-pale-#fff-background-color tr:nth-child(odd) {
     background-color: #fcf0ef
 }
 
@@ -1311,11 +1311,11 @@ pre.wp-block-verse {
     font-size: 13px
 }
 
-.has-pale-pink-background-color.has-pale-pink-background-color {
+.has-pale-#fff-background-color.has-pale-#fff-background-color {
     background-color: #f78da7
 }
 
-.has-vivid-red-background-color.has-vivid-red-background-color {
+.has-vivid-#fff-background-color.has-vivid-#fff-background-color {
     background-color: #cf2e2e
 }
 
@@ -1327,11 +1327,11 @@ pre.wp-block-verse {
     background-color: #fcb900
 }
 
-.has-light-green-cyan-background-color.has-light-green-cyan-background-color {
+.has-light-#fff-cyan-background-color.has-light-#fff-cyan-background-color {
     background-color: #7bdcb5
 }
 
-.has-vivid-green-cyan-background-color.has-vivid-green-cyan-background-color {
+.has-vivid-#fff-cyan-background-color.has-vivid-#fff-cyan-background-color {
     background-color: #00d084
 }
 
@@ -1355,11 +1355,11 @@ pre.wp-block-verse {
     background-color: #313131
 }
 
-.has-pale-pink-color.has-pale-pink-color {
+.has-pale-#fff-color.has-pale-#fff-color {
     color: #f78da7
 }
 
-.has-vivid-red-color.has-vivid-red-color {
+.has-vivid-#fff-color.has-vivid-#fff-color {
     color: #cf2e2e
 }
 
@@ -1371,11 +1371,11 @@ pre.wp-block-verse {
     color: #fcb900
 }
 
-.has-light-green-cyan-color.has-light-green-cyan-color {
+.has-light-#fff-cyan-color.has-light-#fff-cyan-color {
     color: #7bdcb5
 }
 
-.has-vivid-green-cyan-color.has-vivid-green-cyan-color {
+.has-vivid-#fff-cyan-color.has-vivid-#fff-cyan-color {
     color: #00d084
 }
 
@@ -1908,7 +1908,7 @@ only screen and (min-resolution:1.5dppx) {
     -webkit-user-select: none
 }
 
-.select2-container .select2-selection--single .select2-selection__rendered {
+.select2-container .select2-selection--single .select2-selection__rende#fff {
     display: block;
     padding-left: 8px;
     padding-right: 20px;
@@ -1921,7 +1921,7 @@ only screen and (min-resolution:1.5dppx) {
     position: relative
 }
 
-.select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered {
+.select2-container[dir=rtl] .select2-selection--single .select2-selection__rende#fff {
     padding-right: 8px;
     padding-left: 20px
 }
@@ -1935,7 +1935,7 @@ only screen and (min-resolution:1.5dppx) {
     -webkit-user-select: none
 }
 
-.select2-container .select2-selection--multiple .select2-selection__rendered {
+.select2-container .select2-selection--multiple .select2-selection__rende#fff {
     display: inline-block;
     overflow: hidden;
     padding-left: 8px;
@@ -2072,7 +2072,7 @@ only screen and (min-resolution:1.5dppx) {
     border-radius: 4px
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
+.select2-container--default .select2-selection--single .select2-selection__rende#fff {
     color: #444;
     line-height: 28px
 }
@@ -2138,7 +2138,7 @@ only screen and (min-resolution:1.5dppx) {
     cursor: text
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+.select2-container--default .select2-selection--multiple .select2-selection__rende#fff {
     box-sizing: border-box;
     list-style: none;
     margin: 0;
@@ -2146,7 +2146,7 @@ only screen and (min-resolution:1.5dppx) {
     width: 100%
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+.select2-container--default .select2-selection--multiple .select2-selection__rende#fff li {
     list-style: none
 }
 
@@ -2313,7 +2313,7 @@ only screen and (min-resolution:1.5dppx) {
     border: 1px solid #5897fb
 }
 
-.select2-container--classic .select2-selection--single .select2-selection__rendered {
+.select2-container--classic .select2-selection--single .select2-selection__rende#fff {
     color: #444;
     line-height: 28px
 }
@@ -2419,7 +2419,7 @@ only screen and (min-resolution:1.5dppx) {
     border: 1px solid #5897fb
 }
 
-.select2-container--classic .select2-selection--multiple .select2-selection__rendered {
+.select2-container--classic .select2-selection--multiple .select2-selection__rende#fff {
     list-style: none;
     margin: 0;
     padding: 0 5px
@@ -3334,8 +3334,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 /*!
 Theme Name: Phil & Co.
 Theme URI: http://philandcompany.com
-Author: Joshua Fredrickson
-Author URI: https://joshuafredrickson.com
+Author: Joshua F#fffrickson
+Author URI: https://joshuaf#fffrickson.com
 Description: Custom WordPress theme built for ICPH by Phil & Co.
 Version: 1.0
 License: GPL-2.0
@@ -3354,11 +3354,11 @@ Text Domain: understrap
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
+    --#fff: #e83e8c;
+    --#fff: #dc3545;
     --orange: #fd7e14;
     --yellow: #ffc107;
-    --green: #28a745;
+    --#fff: #28a745;
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
@@ -3970,7 +3970,7 @@ pre code {
     margin-left: auto
 }
 
-.full-width-measured-text .entry-content,
+.full-width-measu#fff-text .entry-content,
 .row,
 .searchandfilter ul,
 .wp-block-columns {
@@ -4062,14 +4062,14 @@ pre code {
 .col-xl-8,
 .col-xl-9,
 .col-xl-auto,
-.full-width-measured-text .entry-content h1,
-.full-width-measured-text .entry-content h2,
-.full-width-measured-text .entry-content h3,
-.full-width-measured-text .entry-content h4,
-.full-width-measured-text .entry-content h5,
-.full-width-measured-text .entry-content h6,
-.full-width-measured-text .entry-content p,
-.full-width-measured-text .entry-content>*,
+.full-width-measu#fff-text .entry-content h1,
+.full-width-measu#fff-text .entry-content h2,
+.full-width-measu#fff-text .entry-content h3,
+.full-width-measu#fff-text .entry-content h4,
+.full-width-measu#fff-text .entry-content h5,
+.full-width-measu#fff-text .entry-content h6,
+.full-width-measu#fff-text .entry-content p,
+.full-width-measu#fff-text .entry-content>*,
 .searchandfilter ul li,
 .wp-block-columns .wp-block-column,
 .wp-block-columns.has-2-columns .wp-block-column {
@@ -4149,7 +4149,7 @@ pre code {
 }
 
 .col-12,
-.full-width-measured-text .entry-content>*,
+.full-width-measu#fff-text .entry-content>*,
 .searchandfilter ul li,
 .wp-block-columns.has-2-columns .wp-block-column {
     flex: 0 0 100%;
@@ -4440,13 +4440,13 @@ pre code {
         max-width: 50%
     }
     .col-md-7,
-    .full-width-measured-text .entry-content h1,
-    .full-width-measured-text .entry-content h2,
-    .full-width-measured-text .entry-content h3,
-    .full-width-measured-text .entry-content h4,
-    .full-width-measured-text .entry-content h5,
-    .full-width-measured-text .entry-content h6,
-    .full-width-measured-text .entry-content p {
+    .full-width-measu#fff-text .entry-content h1,
+    .full-width-measu#fff-text .entry-content h2,
+    .full-width-measu#fff-text .entry-content h3,
+    .full-width-measu#fff-text .entry-content h4,
+    .full-width-measu#fff-text .entry-content h5,
+    .full-width-measu#fff-text .entry-content h6,
+    .full-width-measu#fff-text .entry-content p {
         flex: 0 0 58.33333%;
         max-width: 58.33333%
     }
@@ -4878,17 +4878,17 @@ pre code {
     padding: .3rem
 }
 
-.table-bordered {
+.table-borde#fff {
     border: 1px solid #dee2e6
 }
 
-.table-bordered td,
-.table-bordered th {
+.table-borde#fff td,
+.table-borde#fff th {
     border: 1px solid #dee2e6
 }
 
-.table-bordered thead td,
-.table-bordered thead th {
+.table-borde#fff thead td,
+.table-borde#fff thead th {
     border-bottom-width: 2px
 }
 
@@ -5082,7 +5082,7 @@ pre code {
     border-color: #32383e
 }
 
-.table-dark.table-bordered {
+.table-dark.table-borde#fff {
     border: 0
 }
 
@@ -5102,7 +5102,7 @@ pre code {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar
     }
-    .table-responsive-sm>.table-bordered {
+    .table-responsive-sm>.table-borde#fff {
         border: 0
     }
 }
@@ -5115,7 +5115,7 @@ pre code {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar
     }
-    .table-responsive-md>.table-bordered {
+    .table-responsive-md>.table-borde#fff {
         border: 0
     }
 }
@@ -5128,7 +5128,7 @@ pre code {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar
     }
-    .table-responsive-lg>.table-bordered {
+    .table-responsive-lg>.table-borde#fff {
         border: 0
     }
 }
@@ -5141,7 +5141,7 @@ pre code {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar
     }
-    .table-responsive-xl>.table-bordered {
+    .table-responsive-xl>.table-borde#fff {
         border: 0
     }
 }
@@ -5154,7 +5154,7 @@ pre code {
     -ms-overflow-style: -ms-autohiding-scrollbar
 }
 
-.table-responsive>.table-bordered {
+.table-responsive>.table-borde#fff {
     border: 0
 }
 
@@ -5188,7 +5188,7 @@ pre code {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .form-control,
     .wpforms-container input[type=date],
     .wpforms-container input[type=datetime-local],
@@ -6362,7 +6362,7 @@ select.form-control-lg:not([size]):not([multiple]) {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .btn,
     .wp-block-button .wp-block-button__link,
     .wpforms-container button[type=submit] {
@@ -6610,7 +6610,7 @@ fieldset:disabled a.btn {
 .btn-info:not(:disabled):not(.disabled).active,
 .btn-info:not(:disabled):not(.disabled):active,
 .show>.btn-info.dropdown-toggle {
-    color: #fff;
+    color: blue
     background-color: #117a8b;
     border-color: #10707f
 }
@@ -6838,7 +6838,7 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .show>.btn-outline-primary.dropdown-toggle {
-    color: #fff;
+    color: yellow;
     background-color: #212063;
     border-color: #212063
 }
@@ -6914,7 +6914,7 @@ fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled).active,
 .btn-outline-success:not(:disabled):not(.disabled):active,
 .show>.btn-outline-success.dropdown-toggle {
-    color: #fff;
+    color: purple;
     background-color: #28a745;
     border-color: #28a745
 }
@@ -7218,7 +7218,7 @@ input[type=submit].btn-block {
     transition: opacity .15s linear
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .fade {
         transition: none
     }
@@ -7239,7 +7239,7 @@ input[type=submit].btn-block {
     transition: height .35s ease
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .collapsing {
         transition: none
     }
@@ -8713,7 +8713,7 @@ input[type=submit].btn-block {
 }
 
 .overview {
-    color:red;
+    color:#fff;
 }
 
 .nav-link:focus,
@@ -8858,9 +8858,14 @@ input[type=submit].btn-block {
     padding: .25rem .75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
+/*    background-color: transparent;*/
+/*    border: 1px solid transparent;*/
     border-radius: .5rem
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+    background-color: #fff;
 }
 
 .navbar-toggler:focus,
@@ -9155,7 +9160,7 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-text {
-    color: #fff
+    color: #fff;
 }
 
 .navbar-dark .navbar-text a {
@@ -9891,7 +9896,7 @@ input[type=submit].btn-block {
     transition: width .6s ease
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .progress-bar {
         transition: none
     }
@@ -10211,7 +10216,7 @@ button.close {
     transform: translate(0, -25%)
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .modal.fade .modal-dialog {
         transition: none
     }
@@ -10222,7 +10227,7 @@ button.close {
     transform: translate(0, 0)
 }
 
-.modal-dialog-centered {
+.modal-dialog-cente#fff {
     display: flex;
     align-items: center;
     min-height: calc(100% - (.5rem * 2))
@@ -10314,7 +10319,7 @@ button.close {
         max-width: 500px;
         margin: 1.75rem auto
     }
-    .modal-dialog-centered {
+    .modal-dialog-cente#fff {
         min-height: calc(100% - (1.75rem * 2))
     }
     .modal-sm {
@@ -10675,7 +10680,7 @@ button.close {
     perspective: 1000px
 }
 
-@media screen and (prefers-reduced-motion:reduce) {
+@media screen and (prefers-#fffuced-motion:#fffuce) {
     .carousel-item {
         transition: none
     }
@@ -11170,12 +11175,12 @@ button.bg-golden-yellow:hover {
 .d-flex,
 .entry-header,
 .entry-header .col-12,
-.entry-header .full-width-measured-text .entry-content>*,
+.entry-header .full-width-measu#fff-text .entry-content>*,
 .entry-header .searchandfilter ul li,
 .entry-header .wp-block-columns.has-2-columns .wp-block-column,
 .footer-opt-in .wpforms-container .wpforms-field-container,
 .footer-opt-in .wpforms-container .wpforms-submit-container,
-.full-width-measured-text .entry-header .entry-content>*,
+.full-width-measu#fff-text .entry-header .entry-content>*,
 .post-card,
 .post-card__text,
 .searchandfilter ul .entry-header li,
@@ -11400,11 +11405,11 @@ button.bg-golden-yellow:hover {
 
 .entry-header,
 .entry-header .col-12,
-.entry-header .full-width-measured-text .entry-content>*,
+.entry-header .full-width-measu#fff-text .entry-content>*,
 .entry-header .searchandfilter ul li,
 .entry-header .wp-block-columns.has-2-columns .wp-block-column,
 .flex-column,
-.full-width-measured-text .entry-header .entry-content>*,
+.full-width-measu#fff-text .entry-header .entry-content>*,
 .post-card,
 .post-card__text,
 .searchandfilter ul .entry-header li,
@@ -13782,8 +13787,8 @@ a.text-golden-yellow:hover {
     .wp-block-table th {
         background-color: #fff!important
     }
-    .table-bordered td,
-    .table-bordered th {
+    .table-borde#fff td,
+    .table-borde#fff th {
         border: 1px solid #dee2e6!important
     }
     .table-dark {
@@ -13987,7 +13992,7 @@ a.skip-link {
  *
  * mmenu.frebsite.nl
  *  
- * Copyright (c) Fred Heusschen
+ * Copyright (c) F#fff Heusschen
  * www.frebsite.nl
  *
  * License: CC-BY-NC-4.0
@@ -17556,7 +17561,7 @@ body.home .entry-header__image {
 }
 
 .close,
-.full-width-measured-text body.home .widget__latest-news .entry-content>*,
+.full-width-measu#fff-text body.home .widget__latest-news .entry-content>*,
 .post-card,
 .searchandfilter ul body.home .widget__latest-news li,
 .stuck,
@@ -17564,7 +17569,7 @@ body.home .entry-header__image {
 .wp-block-columns.has-2-columns body.home .widget__latest-news .wp-block-column,
 a,
 body.home .widget__latest-news .col-12,
-body.home .widget__latest-news .full-width-measured-text .entry-content>*,
+body.home .widget__latest-news .full-width-measu#fff-text .entry-content>*,
 body.home .widget__latest-news .searchandfilter ul li,
 body.home .widget__latest-news .wp-block-columns.has-2-columns .wp-block-column {
     transition: all .25s ease-in-out
@@ -17789,7 +17794,7 @@ iframe {
 }
 
 .search-toggler {
-    color: #fff
+    color: #fff;
 }
 
 .search-toggler:focus,
@@ -17992,20 +17997,20 @@ iframe {
     }
 }
 
-.entry-header .full-width-measured-text .entry-content,
+.entry-header .full-width-measu#fff-text .entry-content,
 .entry-header .row,
 .entry-header .searchandfilter ul,
 .entry-header .wp-block-columns,
-.full-width-measured-text .entry-header .entry-content,
+.full-width-measu#fff-text .entry-header .entry-content,
 .searchandfilter .entry-header ul {
     margin-left: -30px
 }
 
 .entry-header .col-12,
-.entry-header .full-width-measured-text .entry-content>*,
+.entry-header .full-width-measu#fff-text .entry-content>*,
 .entry-header .searchandfilter ul li,
 .entry-header .wp-block-columns.has-2-columns .wp-block-column,
-.full-width-measured-text .entry-header .entry-content>*,
+.full-width-measu#fff-text .entry-header .entry-content>*,
 .searchandfilter ul .entry-header li,
 .wp-block-columns.has-2-columns .entry-header .wp-block-column {
     background: url(https://www.icphusa.org/wp-content/themes/philco-icph/assets/css/../images/wedge.svg) top no-repeat;
@@ -18016,10 +18021,10 @@ iframe {
 
 @media (max-width:767.98px) {
     .entry-header .col-12,
-    .entry-header .full-width-measured-text .entry-content>*,
+    .entry-header .full-width-measu#fff-text .entry-content>*,
     .entry-header .searchandfilter ul li,
     .entry-header .wp-block-columns.has-2-columns .wp-block-column,
-    .full-width-measured-text .entry-header .entry-content>*,
+    .full-width-measu#fff-text .entry-header .entry-content>*,
     .searchandfilter ul .entry-header li,
     .wp-block-columns.has-2-columns .entry-header .wp-block-column {
         padding: 3.25rem 1.875rem 1.375rem
@@ -18037,20 +18042,20 @@ iframe {
     min-height: 20vh
 }
 
-.entry-header--no-wedge .full-width-measured-text .entry-content,
+.entry-header--no-wedge .full-width-measu#fff-text .entry-content,
 .entry-header--no-wedge .row,
 .entry-header--no-wedge .searchandfilter ul,
 .entry-header--no-wedge .wp-block-columns,
-.full-width-measured-text .entry-header--no-wedge .entry-content,
+.full-width-measu#fff-text .entry-header--no-wedge .entry-content,
 .searchandfilter .entry-header--no-wedge ul {
     margin-left: -15px
 }
 
 .entry-header--no-wedge .col-12,
-.entry-header--no-wedge .full-width-measured-text .entry-content>*,
+.entry-header--no-wedge .full-width-measu#fff-text .entry-content>*,
 .entry-header--no-wedge .searchandfilter ul li,
 .entry-header--no-wedge .wp-block-columns.has-2-columns .wp-block-column,
-.full-width-measured-text .entry-header--no-wedge .entry-content>*,
+.full-width-measu#fff-text .entry-header--no-wedge .entry-content>*,
 .searchandfilter ul .entry-header--no-wedge li,
 .wp-block-columns.has-2-columns .entry-header--no-wedge .wp-block-column {
     background-image: none;
@@ -18421,10 +18426,10 @@ iframe {
 }
 
 @media (max-width:767.98px) {
-    .full-width-measured-text .widget__latest-news .entry-content>*,
+    .full-width-measu#fff-text .widget__latest-news .entry-content>*,
     .searchandfilter ul .widget__latest-news li,
     .widget__latest-news .col-12,
-    .widget__latest-news .full-width-measured-text .entry-content>*,
+    .widget__latest-news .full-width-measu#fff-text .entry-content>*,
     .widget__latest-news .searchandfilter ul li,
     .widget__latest-news .wp-block-columns.has-2-columns .wp-block-column,
     .wp-block-columns.has-2-columns .widget__latest-news .wp-block-column {
@@ -18974,20 +18979,20 @@ body.home .entry-header__image--blur {
     filter: blur(16px)
 }
 
-.full-width-measured-text body.home .entry-header .entry-content,
+.full-width-measu#fff-text body.home .entry-header .entry-content,
 .searchandfilter body.home .entry-header ul,
-body.home .entry-header .full-width-measured-text .entry-content,
+body.home .entry-header .full-width-measu#fff-text .entry-content,
 body.home .entry-header .row,
 body.home .entry-header .searchandfilter ul,
 body.home .entry-header .wp-block-columns {
     margin-left: -15px
 }
 
-.full-width-measured-text body.home .entry-header .entry-content>*,
+.full-width-measu#fff-text body.home .entry-header .entry-content>*,
 .searchandfilter ul body.home .entry-header li,
 .wp-block-columns.has-2-columns body.home .entry-header .wp-block-column,
 body.home .entry-header .col-12,
-body.home .entry-header .full-width-measured-text .entry-content>*,
+body.home .entry-header .full-width-measu#fff-text .entry-content>*,
 body.home .entry-header .searchandfilter ul li,
 body.home .entry-header .wp-block-columns.has-2-columns .wp-block-column {
     background-image: none
@@ -19012,39 +19017,39 @@ body.home #content::after {
     display: none
 }
 
-.full-width-measured-text body.home .widget__latest-news .entry-content>:hover,
+.full-width-measu#fff-text body.home .widget__latest-news .entry-content>:hover,
 .searchandfilter ul body.home .widget__latest-news li:hover,
 .wp-block-columns.has-2-columns body.home .widget__latest-news .wp-block-column:hover,
 body.home .widget__latest-news .col-12:hover,
-body.home .widget__latest-news .full-width-measured-text .entry-content>:hover,
+body.home .widget__latest-news .full-width-measu#fff-text .entry-content>:hover,
 body.home .widget__latest-news .searchandfilter ul li:hover,
 body.home .widget__latest-news .wp-block-columns.has-2-columns .wp-block-column:hover {
     -webkit-transform: translateY(-.25rem);
     transform: translateY(-.25rem)
 }
 
-.full-width-measured-text .entry-meta a {
+.full-width-measu#fff-text .entry-meta a {
     color: #fff
 }
 
-.full-width-measured-text .entry-meta a:hover {
+.full-width-measu#fff-text .entry-meta a:hover {
     color: #fff
 }
 
-.featured-post-columns {
+.featu#fff-post-columns {
     display: flex
 }
 
-.featured-post-columns .wp-block-column:not(.is-admin) {
+.featu#fff-post-columns .wp-block-column:not(.is-admin) {
     margin-left: 0!important;
     margin-right: 0!important
 }
 
-.featured-post-columns .wp-block-column:not(.is-empty) a {
+.featu#fff-post-columns .wp-block-column:not(.is-empty) a {
     background-color: #000
 }
 
-.featured-post-columns .wp-block-column a {
+.featu#fff-post-columns .wp-block-column a {
     background-position: center;
     background-size: cover;
     display: block;
@@ -19053,28 +19058,28 @@ body.home .widget__latest-news .wp-block-columns.has-2-columns .wp-block-column:
     padding: 1.4rem 1.2rem
 }
 
-.featured-post-columns .wp-block-column a .post-card__title {
+.featu#fff-post-columns .wp-block-column a .post-card__title {
     color: #fff;
     margin-top: 3rem
 }
 
-.featured-post-columns .wp-block-column a p {
+.featu#fff-post-columns .wp-block-column a p {
     margin-top: 3rem
 }
 
-.featured-post-columns .wp-block-column a:hover .post-card__title {
+.featu#fff-post-columns .wp-block-column a:hover .post-card__title {
     color: #0cb8f3
 }
 
 @media (max-width:991.98px) {
-    .featured-post-columns .wp-block-column {
+    .featu#fff-post-columns .wp-block-column {
         flex: 0 0 50%;
         max-width: 50%
     }
 }
 
 @media (max-width:767.98px) {
-    .featured-post-columns .wp-block-column {
+    .featu#fff-post-columns .wp-block-column {
         flex: 0 0 100%;
         max-width: 100%
     }
@@ -19298,11 +19303,11 @@ body.home .widget__latest-news .wp-block-columns.has-2-columns .wp-block-column:
     background: url(https://www.icphusa.org/wp-content/themes/philco-icph/assets/css/images/down-arrow.svg) bottom 5px center no-repeat
 }
 
-.search-filter-class-uncensored #main-menu .menu-item-other-work .sub-menu {
+.search-filter-class-uncenso#fff #main-menu .menu-item-other-work .sub-menu {
     display: block
 }
 
-.search-filter-class-uncensored #main-menu .menu-item-other-work a {
+.search-filter-class-uncenso#fff #main-menu .menu-item-other-work a {
     background: url(https://www.icphusa.org/wp-content/themes/philco-icph/assets/css/images/down-arrow.svg) bottom 5px center no-repeat
 }
 
@@ -19474,11 +19479,11 @@ body.home .widget__latest-news .wp-block-columns.has-2-columns .wp-block-column:
     text-decoration: underline!important
 }
 
-.search-filter-class-uncensored .menu-item-uncensored {
+.search-filter-class-uncenso#fff .menu-item-uncenso#fff {
     font-weight: 700
 }
 
-.search-filter-class-uncensored .menu-item-uncensored a {
+.search-filter-class-uncenso#fff .menu-item-uncenso#fff a {
     text-decoration: underline!important
 }
 
@@ -19816,8 +19821,8 @@ body {
 /*!
 Theme Name: Phil & Co.
 Theme URI: http://philandcompany.com
-Author: Joshua Fredrickson
-Author URI: https://joshuafredrickson.com
+Author: Joshua F#fffrickson
+Author URI: https://joshuaf#fffrickson.com
 Description: Custom WordPress theme built for ICPH by Phil & Co.
 Version: 1.0
 License: GPL-2.0
@@ -23175,8 +23180,8 @@ div.wpforms-container-full .wpforms-form .iti-flag.np,
     left: -99999px
 }
 
-.wpforms-container .wpforms-required-label {
-    color: red;
+.wpforms-container .wpforms-requi#fff-label {
+    color: #fff;
     font-weight: 400
 }
 
@@ -23434,8 +23439,8 @@ div.wpforms-container-full .wpforms-form .iti-flag.np,
     border: 1px solid #c00
 }
 
-.wpforms-container .wpforms-field-credit-card-expiration label.wpforms-error,
-.wpforms-container .wpforms-field-credit-card-code label.wpforms-error {
+.wpforms-container .wpforms-field-c#fffit-card-expiration label.wpforms-error,
+.wpforms-container .wpforms-field-c#fffit-card-code label.wpforms-error {
     display: none !important
 }
 
@@ -23542,7 +23547,7 @@ div.wpforms-container-full .wpforms-form .iti-flag.np,
     font-size: 22px;
     line-height: 32px;
     color: #fff;
-    background: green;
+    background: #fff;
     opacity: 0;
     position: absolute;
     top: 50%;
