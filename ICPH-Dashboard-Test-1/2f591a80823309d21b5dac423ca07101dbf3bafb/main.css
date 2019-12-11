@@ -23953,15 +23953,15 @@ div.wpforms-container-full .wpforms-notice.wpforms-error .wpforms-notice-action:
         padding: 5px 10px
     }
     .wpforms-container .wpforms-page-indicator.connector .wpforms-page-indicator-page.active {
-        font-weight: 700
+        font-weight: 700;
     }
     .wpforms-container .wpforms-page-indicator.connector .wpforms-page-indicator-page-number {
-        display: none
+        display: none;
     }
     .wpforms-container .wpforms-field-date-time .wpforms-one-half {
         width: 100%;
         margin-left: 0;
-        float: none
+        float: none;
     }
     .wpforms-container .wpforms-field-date-time .wpforms-one-half:first-of-type {
         margin-bottom: 8px
@@ -23969,10 +23969,10 @@ div.wpforms-container-full .wpforms-notice.wpforms-error .wpforms-notice-action:
     .wpforms-container.inline-fields .wpforms-field-container,
     .wpforms-container.inline-fields .wpforms-field {
         display: block;
-        width: 100%
+        width: 100%;
     }
     .wpforms-container.inline-fields .wpforms-submit-container {
-        width: 100%
+        width: 100%;
     }
 }
 
