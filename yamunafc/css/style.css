@@ -163,6 +163,7 @@ attribute that is retained from the original HTML markup*/
 	margin-right: 20px; /*margin for visual separation*/
 	font-size: 12px ;
 }
+
 #attributeText span {
 	font-weight: bold;
 	width: 30px;
