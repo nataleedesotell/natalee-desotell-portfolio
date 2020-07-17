@@ -1,12 +1,12 @@
 var map = L.map('map', {
   center: [28.6139, 77.2090],
   zoom: 9,
-  minZoom: 4,
-  maxZoom: 16,
+  minZoom: 6,
+  maxZoom: 10,
   zoomControl: false,
 });
 
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     id:'mapbox.streets',
     accessToken:'pk.eyJ1IjoibmF0YWxlZWRlc290ZWxsIiwiYSI6ImNqbzYyb3BtbjBnNzUzcXFtN3JycWJvMzAifQ.yBDabAw2e-7FOB7GAnFagA'
@@ -243,8 +243,3 @@ function extractAttributeLabels(data) {
 
   return attributes;
 }
-
-
-$('#title .fa').tooltip({
-  content: 'The Yamuna is India\'s most polluted river, and fecal coliform is one measure of that can indicate how safe it is for drinking, bathing, or agriculture. These data were retrieved from Open Data India.',
-});

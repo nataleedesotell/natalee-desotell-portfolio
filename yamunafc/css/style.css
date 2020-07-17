@@ -4,6 +4,43 @@ body {
 #map {
 	height: 100vh;
 }
+
+
+h2 {
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h4 {
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h5 {
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	font-size: 12pt;
+}
+
+h6 {
+/*	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+*/	font-size: 11pt;
+ 	font-weight: normal;
+}
+
+h6 a {
+	color:#C71585;
+}
+
+#dialog {
+
+}
+
 #title {
 	position: absolute;
 	top: 10px;
@@ -12,18 +49,20 @@ body {
 	border: 2px solid rgba(0,0,0,0.2);
 	border-radius: 8px;
 	padding: 8px 18.6px;
-	padding-top: 3px;
+/*	padding-top: 3px;*/
 	z-index: 10;
 	font-weight: bold;
 	font-size: 18px;
 }
 #title span{
-	font-size: 48px;
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
 }
+
 #title .fa {
 	position: absolute;
 	right: 5px;
 	font-size: 18px;
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
 }
 
 /* Leaflet Popups */
